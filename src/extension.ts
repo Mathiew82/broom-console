@@ -2,10 +2,10 @@ import * as vscode from "vscode";
 
 const messages = {
   es: {
-    removed: "console eliminados",
+    removed: "Todos los console eliminados",
   },
   en: {
-    removed: "console removed",
+    removed: "All console removed",
   },
 };
 
