@@ -1,26 +1,51 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
-import * as vscode from 'vscode';
+import * as vscode from "vscode";
 
-// This method is called when your extension is activated
-// Your extension is activated the very first time the command is executed
-export function activate(context: vscode.ExtensionContext) {
+function removeConsole(methods: string[], successMessage: string) {
+  const editor = vscode.window.activeTextEditor;
 
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "broom-console" is now active!');
+  if (!editor) {
+    vscode.window.showWarningMessage("No hay ningún archivo abierto");
+    return;
+  }
 
-	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with registerCommand
-	// The commandId parameter must match the command field in package.json
-	const disposable = vscode.commands.registerCommand('broom-console.helloWorld', () => {
-		// The code you place here will be executed every time your command is executed
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from broom-console!');
-	});
+  const document = editor.document;
+  const text = document.getText();
 
-	context.subscriptions.push(disposable);
+  const methodsGroup = methods.join("|");
+  const regex = new RegExp(
+    `^[ \\t]*console\\.(${methodsGroup})\\(.*?\\);?[ \\t]*(\\r?\\n)?`,
+    "gm"
+  );
+
+  const newText = text.replace(regex, "");
+
+  const fullRange = new vscode.Range(
+    document.positionAt(0),
+    document.positionAt(text.length)
+  );
+
+  editor.edit((editBuilder) => {
+    editBuilder.replace(fullRange, newText);
+  });
+
+  vscode.window.showInformationMessage(successMessage);
 }
 
-// This method is called when your extension is deactivated
+export function activate(context: vscode.ExtensionContext) {
+  context.subscriptions.push(
+    vscode.commands.registerCommand("removeConsoleLogAndDebug.remove", () =>
+      removeConsole(["log", "debug"], "console.[log|debug] eliminados")
+    )
+  );
+
+  context.subscriptions.push(
+    vscode.commands.registerCommand("removeAllConsole.remove", () =>
+      removeConsole(
+        ["log", "debug", "warn", "error", "info"],
+        "console.[log|debug|warn|error|info] eliminados"
+      )
+    )
+  );
+}
+
 export function deactivate() {}
