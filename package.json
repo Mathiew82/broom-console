@@ -15,11 +15,11 @@
     "commands": [
       {
         "command": "removeConsoleLogAndDebug.remove",
-        "title": "Eliminar todos los console.[log|debug]"
+        "title": "%removeConsoleLogAndDebug.title%"
       },
       {
         "command": "removeAllConsole.remove",
-        "title": "Eliminar todos los console.[log|debug|warn|error|info]"
+        "title": "%removeAllConsole.title%"
       }
     ]
   },

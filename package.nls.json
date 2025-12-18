@@ -1,0 +1,4 @@
+{
+  "removeConsoleLogAndDebug.title": "Remove all console.[log|debug]",
+  "removeAllConsole.title": "Remove all console.[log|debug|warn|error|info]"
+}

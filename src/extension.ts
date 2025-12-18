@@ -1,6 +1,15 @@
 import * as vscode from "vscode";
 
-function removeConsole(methods: string[], successMessage: string) {
+const messages = {
+  es: {
+    removed: "console eliminados",
+  },
+  en: {
+    removed: "console removed",
+  },
+};
+
+function removeConsole(methods: string[]) {
   const editor = vscode.window.activeTextEditor;
 
   if (!editor) {
@@ -28,22 +37,21 @@ function removeConsole(methods: string[], successMessage: string) {
     editBuilder.replace(fullRange, newText);
   });
 
-  vscode.window.showInformationMessage(successMessage);
+  const lang = vscode.env.language.startsWith("es") ? "es" : "en";
+
+  vscode.window.showInformationMessage(messages[lang].removed);
 }
 
 export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(
     vscode.commands.registerCommand("removeConsoleLogAndDebug.remove", () =>
-      removeConsole(["log", "debug"], "console.[log|debug] eliminados")
+      removeConsole(["log", "debug"])
     )
   );
 
   context.subscriptions.push(
     vscode.commands.registerCommand("removeAllConsole.remove", () =>
-      removeConsole(
-        ["log", "debug", "warn", "error", "info"],
-        "console.[log|debug|warn|error|info] eliminados"
-      )
+      removeConsole(["log", "debug", "warn", "error", "info"])
     )
   );
 }
