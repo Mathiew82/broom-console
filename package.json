@@ -21,6 +21,18 @@
         "command": "removeAllConsole.remove",
         "title": "%removeAllConsole.title%"
       }
+    ],
+    "keybindings": [
+      {
+        "command": "removeConsoleLogAndDebug.remove",
+        "key": "alt+shift+c",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "removeAllConsole.remove",
+        "key": "alt+shift+x",
+        "when": "editorTextFocus"
+      }
     ]
   },
   "scripts": {
