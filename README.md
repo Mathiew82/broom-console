@@ -6,7 +6,39 @@
 
 **Broom Console** is a Visual Studio Code extension that lets you **quickly clean `console.*` statements from your code** using simple keyboard shortcuts. No configuration, no setup — just install and use.
 
-### ✨ Features
+<div align="center">
+    <a href="https://marketplace.visualstudio.com/items?itemName=mathiew82.broom-console&ssr=false#overview" target="_blank" rel="noopener">
+        VS Marketplace
+    </a>
+    <span>&nbsp;❖&nbsp;</span>
+    <a href="#features">
+        Features
+    </a>
+    <span>&nbsp;❖&nbsp;</span>
+    <a href="#usage">
+        Usage
+    </a>
+    <span>&nbsp;❖&nbsp;</span>
+    <a href="#contributing">
+        Contributing
+    </a>
+    <span>&nbsp;❖&nbsp;</span>
+    <a href="#license">
+        License
+    </a>
+</div>
+
+&nbsp;
+
+<div align="center">
+[![made-for-VSCode](https://img.shields.io/badge/Made%20for-VSCode-1f425f.svg)](https://code.visualstudio.com/)
+![GitHub stars](https://img.shields.io/github/stars/mathiew82/broom-console)
+![GitHub forks](https://img.shields.io/github/forks/mathiew82/broom-console)
+![GitHub issues](https://img.shields.io/github/issues/mathiew82/broom-console)
+![GitHub PRs](https://img.shields.io/github/issues-pr/mathiew82/broom-console)
+</div>
+
+## Features
 
 - 🧹 Remove `console.log` and `console.debug`
 - 🔥 Remove all `console.*` calls (`log`, `debug`, `warn`, `error`, `info`)
@@ -14,11 +46,9 @@
 - ⚡ Works only on the currently opened file
 - 🧠 Zero configuration: install and go
 
----
+## Usage
 
-### 🚀 Usage
-
-#### Remove `console.log` and `console.debug`
+### Remove `console.log` and `console.debug`
 
 - **Windows / Linux:** `Alt + Shift + C`
 - **macOS:** `Option + Shift + C`
@@ -29,9 +59,7 @@ Or via the Command Palette:
 Broom Console: Remove console.log and console.debug
 ```
 
----
-
-#### Remove all `console.*`
+### Remove all `console.*`
 
 Includes:
 
@@ -52,11 +80,9 @@ Or via the Command Palette:
 Broom Console: Remove all console methods
 ```
 
----
+## Example
 
-### 📝 Example
-
-#### Before
+### Before
 
 ```js
 console.log("debug");
@@ -65,27 +91,13 @@ const value = 42;
 console.error(value);
 ```
 
-#### After
+### After
 
 ```js
 const value = 42;
 ```
 
----
-
-### 🎯 Philosophy
-
-Broom Console is designed to be:
-
-- **Simple**: no configuration required
-- **Fast**: one shortcut and done
-- **Safe**: only affects the active file
-
-Install it, clean your code, and keep coding.
-
----
-
-### 📦 Installation
+## Installation
 
 From the VS Code Marketplace:
 
@@ -93,14 +105,16 @@ From the VS Code Marketplace:
 2. Search for **Broom Console**
 3. Install and enjoy 🧹
 
----
-
-### 🤝 Contributing
+## Contributing
 
 Issues and pull requests are welcome.
 
+## License
+
+[Apache-2.0 license](https://github.com/mathiew82/broom-console?tab=Apache-2.0-1-ov-file#readme)
+
 &nbsp;
 
-#### 💝 Thank you for using it
+### 💝 Thank you for using it
 
 Created by **Mathiew82**: [Github](https://github.com/Mathiew82) | [Portfolio](https://amateo82.es)
