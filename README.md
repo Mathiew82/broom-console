@@ -37,6 +37,7 @@
 ![GitHub forks](https://img.shields.io/github/forks/Mathiew82/broom-console)
 ![GitHub issues](https://img.shields.io/github/issues/Mathiew82/broom-console)
 ![GitHub PRs](https://img.shields.io/github/issues-pr/Mathiew82/broom-console)
+![GitHub issues](https://img.shields.io/github/actions/workflow/status/Mathiew82/broom-console/ci.yml)
 
 </div>
 
