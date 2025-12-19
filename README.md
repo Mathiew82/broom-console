@@ -7,7 +7,7 @@
 **Broom Console** is a Visual Studio Code extension that lets you **quickly clean `console.*` statements from your code** using simple keyboard shortcuts. No configuration, no setup — just install and use.
 
 <div align="center">
-    <a href="https://marketplace.visualstudio.com/items?itemName=mathiew82.broom-console&ssr=false#overview" target="_blank" rel="noopener">
+    <a href="https://marketplace.visualstudio.com/items?itemName=Mathiew82.broom-console&ssr=false#overview" target="_blank" rel="noopener">
         VS Marketplace
     </a>
     <span>&nbsp;❖&nbsp;</span>
