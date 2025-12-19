@@ -4,17 +4,17 @@ type Language = "es" | "en";
 type ConsoleMethod = "log" | "debug" | "warn" | "error" | "info";
 
 interface Messages {
-  readonly removed: string;
+  readonly noActive: string;
 }
 
 type LocalizedMessages = Record<Language, Messages>;
 
 const messages: LocalizedMessages = {
   es: {
-    removed: "Todos los console eliminados",
+    noActive: "No se encontró ningún editor activo",
   },
   en: {
-    removed: "All console removed",
+    noActive: "No active editor found",
   },
 };
 
@@ -26,7 +26,8 @@ async function removeConsole(methods: readonly ConsoleMethod[]): Promise<void> {
   const editor: vscode.TextEditor | undefined = vscode.window.activeTextEditor;
 
   if (!editor) {
-    vscode.window.showWarningMessage("No active editor found");
+    const lang: Language = getLanguage();
+    vscode.window.showWarningMessage(messages[lang].noActive);
     return;
   }
 
@@ -50,9 +51,6 @@ async function removeConsole(methods: readonly ConsoleMethod[]): Promise<void> {
   await editor.edit((editBuilder: vscode.TextEditorEdit) => {
     editBuilder.replace(fullRange, newText);
   });
-
-  const lang: Language = getLanguage();
-  vscode.window.showInformationMessage(messages[lang].removed);
 }
 
 export function activate(context: vscode.ExtensionContext): void {
