@@ -1,15 +1,43 @@
-import * as assert from 'assert';
+import * as assert from "assert";
+import * as vscode from "vscode";
 
-// You can import and use all API from the 'vscode' module
-// as well as import your extension to test it
-import * as vscode from 'vscode';
-// import * as myExtension from '../../extension';
+suite("Broom Console Extension Tests", () => {
+  test("Remove console.log and console.debug", async () => {
+    const document = await vscode.workspace.openTextDocument({
+      content: `
+console.log("test");
+console.debug("debug");
+const a = 1;
+      `,
+      language: "javascript",
+    });
 
-suite('Extension Test Suite', () => {
-	vscode.window.showInformationMessage('Start all tests.');
+    const editor = await vscode.window.showTextDocument(document);
 
-	test('Sample test', () => {
-		assert.strictEqual(-1, [1, 2, 3].indexOf(5));
-		assert.strictEqual(-1, [1, 2, 3].indexOf(0));
-	});
+    await vscode.commands.executeCommand("removeConsoleLogAndDebug.remove");
+
+    const result = editor.document.getText();
+
+    assert.strictEqual(result.trim(), "const a = 1;");
+  });
+
+  test("Remove all console methods", async () => {
+    const document = await vscode.workspace.openTextDocument({
+      content: `
+console.log("log");
+console.warn("warn");
+console.error("error");
+const value = 42;
+    `,
+      language: "javascript",
+    });
+
+    const editor = await vscode.window.showTextDocument(document);
+
+    await vscode.commands.executeCommand("removeAllConsole.remove");
+
+    const result = editor.document.getText();
+
+    assert.strictEqual(result.trim(), "const value = 42;");
+  });
 });
