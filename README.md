@@ -1,71 +1,104 @@
-# broom-console README
+<div style="margin-bottom: 30px; text-align: center">
+  <img src="./assets/logo.png" width="300" style="border-radius: 150px" />
+</div>
 
-This is the README for your extension "broom-console". After writing up a brief description, we recommend including the following sections.
-
-## Features
-
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+**Broom Console** is a Visual Studio Code extension that lets you **quickly clean `console.*` statements from your code** using simple keyboard shortcuts. No configuration, no setup — just install and use.
 
 ---
 
-## Following extension guidelines
+### ✨ Features
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+- 🧹 Remove `console.log` and `console.debug`
+- 🔥 Remove all `console.*` calls (`log`, `debug`, `warn`, `error`, `info`)
+- ⌨️ Ready-to-use keyboard shortcuts
+- ⚡ Works only on the currently opened file
+- 🧠 Zero configuration: install and go
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+---
 
-## Working with Markdown
+### 🚀 Usage
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+#### Remove `console.log` and `console.debug`
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+- **Windows / Linux:** `Alt + Shift + C`
+- **macOS:** `Option + Shift + C`
 
-## For more information
+Or via the Command Palette:
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+```
+Broom Console: Remove console.log and console.debug
+```
 
-**Enjoy!**
+---
+
+#### Remove all `console.*`
+
+Includes:
+
+- `console.log`
+- `console.debug`
+- `console.warn`
+- `console.error`
+- `console.info`
+
+Shortcut:
+
+- **Windows / Linux:** `Alt + Shift + X`
+- **macOS:** `Option + Shift + X`
+
+Or via the Command Palette:
+
+```
+Broom Console: Remove all console methods
+```
+
+---
+
+### 📝 Example
+
+#### Before
+
+```js
+console.log("debug");
+console.warn("warning");
+const value = 42;
+console.error(value);
+```
+
+#### After
+
+```js
+const value = 42;
+```
+
+---
+
+### 🎯 Philosophy
+
+Broom Console is designed to be:
+
+- **Simple**: no configuration required
+- **Fast**: one shortcut and done
+- **Safe**: only affects the active file
+
+Install it, clean your code, and keep coding.
+
+---
+
+### 📦 Installation
+
+From the VS Code Marketplace:
+
+1. Open Extensions (`Ctrl + Shift + X`)
+2. Search for **Broom Console**
+3. Install and enjoy 🧹
+
+---
+
+### 🤝 Contributing
+
+Issues and pull requests are welcome.
+
+---
+
+##
