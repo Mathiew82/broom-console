@@ -19,6 +19,10 @@
         Usage
     </a>
     <span>&nbsp;❖&nbsp;</span>
+    <a href="#installation">
+        Installation
+    </a>
+    <span>&nbsp;❖&nbsp;</span>
     <a href="#contributing">
         Contributing
     </a>
@@ -31,9 +35,8 @@
 [![made-for-VSCode](https://img.shields.io/badge/Made%20for-VSCode-1f425f.svg)](https://code.visualstudio.com/)
 ![GitHub stars](https://img.shields.io/github/stars/Mathiew82/broom-console)
 ![GitHub forks](https://img.shields.io/github/forks/Mathiew82/broom-console)
-![GitHub issues](https://img.shields.io/github/issues/Mathiew82/broom-console)
-![GitHub PRs](https://img.shields.io/github/issues-pr/Mathiew82/broom-console)
 ![GitHub issues](https://img.shields.io/github/actions/workflow/status/Mathiew82/broom-console/ci.yml)
+[![License](https://img.shields.io/crates/l/rnr.svg)](https://github.com/Mathiew82/broom-console/blob/master/LICENSE)
 
 </div>
 
