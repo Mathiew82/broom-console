@@ -77,7 +77,7 @@ Shortcut:
 Or via the Command Palette:
 
 ```
-Broom Console: Remove all console methods
+Broom Console: Remove all console.[log|debug|warn|error|info]
 ```
 
 ## Example
