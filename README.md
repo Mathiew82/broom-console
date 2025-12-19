@@ -1,8 +1,10 @@
-<div style="margin-bottom: 30px; text-align: center">
-  <img src="./assets/logo.png" width="300" style="border-radius: 150px" />
+<div style="margin-bottom:30px; text-align:center;">
+  <img src="./assets/logo.png" style="width:300px; border-radius:150px;" />
 </div>
 
-**Broom Console** is a Visual Studio Code extension that lets you **quickly clean `console.*` statements from your code** using simple keyboard shortcuts. No configuration, no setup — just install and use.
+<p>
+  **Broom Console** is a Visual Studio Code extension that lets you **quickly clean `console.*` statements from your code** using simple keyboard shortcuts. No configuration, no setup — just install and use.
+</p>
 
 ---
 
