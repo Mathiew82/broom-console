@@ -22,10 +22,6 @@
     <a href="#contributing">
         Contributing
     </a>
-    <span>&nbsp;❖&nbsp;</span>
-    <a href="#license">
-        License
-    </a>
 </div>
 
 <p></p>
@@ -111,10 +107,6 @@ From the VS Code Marketplace:
 ## Contributing
 
 Issues and pull requests are welcome.
-
-## License
-
-[Apache-2.0 license](https://github.com/mathiew82/broom-console?tab=Apache-2.0-1-ov-file#readme)
 
 &nbsp;
 
