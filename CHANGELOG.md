@@ -7,6 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [1.0.7] – 2025-12-20
+
+### ✨ Improved
+
+- The info message is no longer displayed in the editor when consoles have been deleted. This is an improvement to the user experience; although the message is no longer helpful, it could be annoying.
+
+## [1.0.6] – 2025-12-20
+
+### 🔒 License
+
+- Change the Apache license to MIT. This license is better suited to this type of extension.
+
+## [1.0.5] – 2025-12-19
+
+### ✨ Improved
+
+- Improved the README with more information.
+
 ## [1.0.4] – 2025-12-19
 
 ### 🐛 Fixed
