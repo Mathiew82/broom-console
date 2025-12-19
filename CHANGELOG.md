@@ -1,9 +1,63 @@
-# Change Log
+# Changelog
 
-All notable changes to the "broom-console" extension will be documented in this file.
+All notable changes to **Broom Console** will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
+and this project adheres to [Semantic Versioning](https://semver.org/).
 
-## [Unreleased]
+---
 
-- Initial release
+## [1.0.4] – 2025-12-19
+
+### 🐛 Fixed
+
+- Fixed an issue where some `console.*` statements were not being removed correctly when running the **Remove all console methods** command.
+- Improved the regular expression handling to ensure only lines containing `console.*` statements are removed, without affecting surrounding blank lines or unrelated code.
+
+### 🧪 Added
+
+- Added automated extension tests to validate the behavior of:
+  - Removing `console.log` and `console.debug`
+  - Removing all supported `console.*` methods (`log`, `debug`, `warn`, `error`, `info`)
+  - Handling edge cases such as no active editor and files without console statements
+
+### 🔒 Quality & Reliability
+
+- Integrated tests into a Continuous Integration (CI) pipeline using **GitHub Actions**.
+- Tests now run automatically on every push and pull request, increasing confidence and preventing regressions.
+- CI setup includes a headless VS Code test environment to ensure cross-platform reliability.
+
+---
+
+## [1.0.3] – 2025-12-18
+
+### ✨ Improved
+
+- Refactored internal logic to reuse a single, generic console-removal function.
+- Added automatic language detection (English / Spanish) for user-facing messages.
+
+---
+
+## [1.0.2] – 2025-12-17
+
+### ✨ Added
+
+- New command to remove **all** `console.*` statements (`log`, `debug`, `warn`, `error`, `info`).
+- Keyboard shortcuts for faster usage.
+
+---
+
+## [1.0.1] – 2025-12-16
+
+### ✨ Added
+
+- Initial command to remove `console.log` and `console.debug` from the active editor.
+
+---
+
+## [1.0.0] – 2025-12-15
+
+### 🎉 Initial Release
+
+- First public release of **Broom Console**.
+- Simple, zero-configuration commands to clean up `console.*` statements from the active file.
