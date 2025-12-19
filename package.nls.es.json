@@ -1,4 +1,4 @@
 {
-  "removeConsoleLogAndDebug.title": "Eliminar todos los console.[log|debug]",
-  "removeAllConsole.title": "Eliminar todos los console.[log|debug|warn|error|info]"
+  "removeConsoleLogAndDebug.title": "Broom Console: Eliminar console.log y console.debug",
+  "removeAllConsole.title": "Broom Console: Eliminar todos los console.[log|debug|warn|error|info]"
 }
