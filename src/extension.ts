@@ -22,7 +22,7 @@ function getLanguage(): Language {
   return vscode.env.language.startsWith("es") ? "es" : "en";
 }
 
-function removeConsole(methods: readonly ConsoleMethod[]): void {
+async function removeConsole(methods: readonly ConsoleMethod[]): Promise<void> {
   const editor: vscode.TextEditor | undefined = vscode.window.activeTextEditor;
 
   if (!editor) {
@@ -47,7 +47,7 @@ function removeConsole(methods: readonly ConsoleMethod[]): void {
     document.positionAt(text.length)
   );
 
-  editor.edit((editBuilder: vscode.TextEditorEdit) => {
+  await editor.edit((editBuilder: vscode.TextEditorEdit) => {
     editBuilder.replace(fullRange, newText);
   });
 
@@ -59,13 +59,15 @@ export function activate(context: vscode.ExtensionContext): void {
   context.subscriptions.push(
     vscode.commands.registerCommand(
       "removeConsoleLogAndDebug.remove",
-      (): void => removeConsole(["log", "debug"])
+      (): Promise<void> => removeConsole(["log", "debug"])
     )
   );
 
   context.subscriptions.push(
-    vscode.commands.registerCommand("removeAllConsole.remove", (): void =>
-      removeConsole(["log", "debug", "warn", "error", "info"])
+    vscode.commands.registerCommand(
+      "removeAllConsole.remove",
+      (): Promise<void> =>
+        removeConsole(["log", "debug", "warn", "error", "info"])
     )
   );
 }
