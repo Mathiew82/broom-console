@@ -1,8 +1,8 @@
 {
   "name": "broom-console",
-  "displayName": "broom-console",
+  "displayName": "Broom Console",
   "description": "This is a Visual Studio Code extension that allows you to delete all console logs and console debug output from a file.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "icon": "logo.png",
   "engines": {
     "vscode": "^1.107.0"
