@@ -5,12 +5,16 @@
   "version": "1.0.4",
   "icon": "logo.png",
   "engines": {
-    "vscode": "^1.107.0"
+    "vscode": "^1.85.0"
   },
   "categories": [
     "Other"
   ],
   "publisher": "Mathiew82",
+  "author": {
+    "name": "Alberto Mateo Alcalá",
+    "url": "https://amateo82.es"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/Mathiew82/broom-console"
