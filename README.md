@@ -28,14 +28,16 @@
     </a>
 </div>
 
-&nbsp;
+<p></p>
 
 <div align="center">
+  
 [![made-for-VSCode](https://img.shields.io/badge/Made%20for-VSCode-1f425f.svg)](https://code.visualstudio.com/)
-![GitHub stars](https://img.shields.io/github/stars/mathiew82/broom-console)
-![GitHub forks](https://img.shields.io/github/forks/mathiew82/broom-console)
-![GitHub issues](https://img.shields.io/github/issues/mathiew82/broom-console)
-![GitHub PRs](https://img.shields.io/github/issues-pr/mathiew82/broom-console)
+![GitHub stars](https://img.shields.io/github/stars/Mathiew82/broom-console)
+![GitHub forks](https://img.shields.io/github/forks/Mathiew82/broom-console)
+![GitHub issues](https://img.shields.io/github/issues/Mathiew82/broom-console)
+![GitHub PRs](https://img.shields.io/github/issues-pr/Mathiew82/broom-console)
+
 </div>
 
 ## Features
@@ -77,7 +79,7 @@ Shortcut:
 Or via the Command Palette:
 
 ```
-Broom Console: Remove all console.[log|debug|warn|error|info]
+Broom Console: Remove all console methods
 ```
 
 ## Example
