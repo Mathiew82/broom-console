@@ -32,5 +32,8 @@ jobs:
       - name: Compile extension
         run: pnpm run compile
 
-      - name: Run extension tests
-        run: pnpm test
+      - name: Install xvfb
+        run: sudo apt-get update && sudo apt-get install -y xvfb
+
+      - name: Run extension tests (headless)
+        run: xvfb-run -a pnpm test
