@@ -1,8 +1,8 @@
 {
   "name": "broom-console",
   "displayName": "Broom Console",
-  "description": "Delete all console [logs|debug] in one click.",
-  "version": "1.0.8",
+  "description": "Remove all console.log and console.debug in one click.",
+  "version": "1.0.9",
   "icon": "logo.png",
   "engines": {
     "vscode": "^1.107.0"
