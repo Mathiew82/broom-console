@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [1.0.8] – 2025-12-20
+
+### ✨ Improved
+
+- Update the extension description.
+
 ## [1.0.7] – 2025-12-20
 
 ### ✨ Improved
