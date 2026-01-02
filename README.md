@@ -107,10 +107,5 @@ From the VS Code Marketplace:
 
 ## Contributing
 
-Issues and pull requests are welcome.
-
-&nbsp;
-
-### 💝 Thank you for using it
-
-Created by **Mathiew82**: [Github](https://github.com/Mathiew82) | [Portfolio](https://amateo82.es)
+Contributions are welcome!
+Please read [CONTRIBUTING.md](./CONTRIBUTING.md) for details.
